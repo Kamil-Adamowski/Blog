@@ -1,38 +1,26 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+
 import Layout from "../components/layout"
 
-const IndexPage = ({data: {allSitePage: {edges}}}) => (
+const IndexPage = ({data: {blog: {posts}}}) => (
   <Layout>
-    <h1>Hello world</h1>
-    {edges.map(page => (
-      <div>
-        <Link key={page.node.path} to={page.node.path}>
-          <img src={page.node.context.data.thumbnail} alt='' />
-           <h1>{page.node.context.data.title}</h1>
-        </Link>
+    {posts.map(post => (
+      <Link to={post.slug}>
+        {post.title}
+      </Link>
+    ))}
 
-      </div>
-    )
-    )}
   </Layout>
 )
 
 export const allPostsQuery = graphql`
 {
-	allSitePage(filter:
-  {component:{eq:"src/templates/postTemplate.js"} }){
-    edges {
-      node {
-        path
-        component
-        context {
-          data {
-            title
-            thumbnail
-          }
-        }
-      }
+  blog {
+    posts {
+      title
+      thumbnail
+      slug
     }
   }
 }

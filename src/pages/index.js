@@ -4,15 +4,15 @@ import Layout from '../layout/layout'
 
 
 const IndexPage = ({data: {blog: {posts}}}) => (
-  <Layout >
-    {posts.map(post => (
-      <div>
-        <Link to={post.slug}>
-          <h3>{post.title}</h3>
-        </Link>
-      </div>
-    ))}
-  </Layout >
+    <Layout >
+      {posts.map(post => (
+        <div>
+          <Link to={post.slug}>
+            <h3>{post.title}</h3>
+          </Link>
+        </div>
+      ))}
+    </Layout >
 )
 
 export const allPostsQuery = graphql`

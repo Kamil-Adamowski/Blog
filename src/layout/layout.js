@@ -1,12 +1,12 @@
 import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../utils/theme'
-
+import Header from '../components/header/header'
  const GlobalStyle = createGlobalStyle`
 	body {
-		padding: 0,
-		margin: 0,
-		font-family: 'Monsterrat';
+		padding: 0;
+		margin: 0;
+	font-family: 'Montserrat';
 		color: black;
 	}
 
@@ -29,6 +29,7 @@ const Layout =({children}) => (
 	<ThemeProvider theme={theme}>
 		<>
 			<GlobalStyle />
+			<Header />
 			<StyledWrapper>
 				{children}
 			</StyledWrapper>

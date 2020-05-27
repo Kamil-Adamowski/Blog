@@ -1,17 +1,18 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
+import Layout from '../layout/layout'
 
-import Layout from "../components/layout"
 
 const IndexPage = ({data: {blog: {posts}}}) => (
-  <Layout>
+  <Layout >
     {posts.map(post => (
-      <Link to={post.slug}>
-        {post.title}
-      </Link>
+      <div>
+        <Link to={post.slug}>
+          <h3>{post.title}</h3>
+        </Link>
+      </div>
     ))}
-
-  </Layout>
+  </Layout >
 )
 
 export const allPostsQuery = graphql`
@@ -19,6 +20,7 @@ export const allPostsQuery = graphql`
   blog {
     posts {
       title
+      summary
       thumbnail
       slug
     }

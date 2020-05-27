@@ -15,7 +15,8 @@ exports.createPages = async ({ graphql, actions }) => {
         title
         description
         thumbnail
-        slug
+				slug
+				summary
         author {
           id
           name

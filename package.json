@@ -1,9 +1,9 @@
 {
-  "name": "Bakster Blog",
+  "name": "bakster-blog",
   "private": true,
   "description": "Blog",
   "version": "0.1.0",
-  "author": "",
+  "author": "@Bakster",
   "dependencies": {
     "babel-plugin-styled-components": "^1.10.7",
     "gatsby": "^2.21.37",

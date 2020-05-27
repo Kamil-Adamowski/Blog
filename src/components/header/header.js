@@ -1,28 +1,12 @@
-import { Link } from "gatsby"
 import React from "react"
+import { Link } from "gatsby"
+
 
 const Header = () => (
-  <header
-    style={{
-      position: 'fixed',
-      zIndex: '999',
-      background: `rebeccapurple`,
-      width: '100%',
-    }}
-  >
-    <div
-      style={{
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
+  <header>
+    <div>
+      <h1>
+        <Link to="/">
           BLOG
         </Link>
       </h1>

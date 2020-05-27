@@ -2,6 +2,7 @@ import React from 'react'
 import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
 import { theme } from '../utils/theme'
 import Header from '../components/header/header'
+
  const GlobalStyle = createGlobalStyle`
 	body {
 		padding: 0;

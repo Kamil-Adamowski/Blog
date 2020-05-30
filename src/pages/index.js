@@ -2,9 +2,8 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from '../layout/layout'
 
-
 const IndexPage = ({data: {blog: {posts}}}) => (
-    <Layout >
+    <Layout>
       {posts.map(post => (
         <div>
           <Link to={post.slug}>
@@ -12,7 +11,7 @@ const IndexPage = ({data: {blog: {posts}}}) => (
           </Link>
         </div>
       ))}
-    </Layout >
+    </Layout>
 )
 
 export const allPostsQuery = graphql`

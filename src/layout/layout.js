@@ -7,8 +7,12 @@ import Header from '../components/header/header'
 	body {
 		padding: 0;
 		margin: 0;
-	font-family: 'Montserrat';
+		font-family: 'Montserrat';
 		color: black;
+	}
+
+	h1 {
+		margin: 0;
 	}
 
 	*, *::before, *::after {
@@ -17,8 +21,8 @@ import Header from '../components/header/header'
 `
 
 const StyledWrapper = styled.div`
-	height: 100vh;
 	display: flex;
+	min-height: 100vh;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;

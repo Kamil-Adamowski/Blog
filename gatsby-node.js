@@ -16,6 +16,7 @@ exports.createPages = async ({ graphql, actions }) => {
         description
         thumbnail
 				slug
+				durationOfReading
 				summary
         author {
           id
@@ -25,7 +26,6 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   }
 	}
- 
 }
 	`)
 	postsQuery.data.blog.posts.edges.forEach(post => {

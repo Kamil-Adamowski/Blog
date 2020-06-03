@@ -1,9 +1,9 @@
 import React, {useState} from "react"
 import { Link } from "gatsby"
 import styled from 'styled-components'
+import Logo from "../../images/logo.png"
 
 const StyledHeader = styled.div`
- position: fixed;
   background: ${({ theme }) => theme.colors.primary};
   height: 8vh;
   width: 100%;
@@ -15,24 +15,36 @@ const StyledHeader = styled.div`
 
 const StyledLink = styled(Link)`
   color: ${({ white, theme }) => white ? theme.colors.secondaryText : theme.colors.special};
-  font-weight: ${({ theme }) => theme.font.regular};
+  font-weight: ${({ theme }) => theme.font.bold};
+  font-size: 26px;
   text-decoration: none;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+	justify-content: center;
 `;
 
 
 const Hamburger = styled.div`
+ position: fixed;
   left:20px;
   z-index: 999;
-  position: absolute;
   background: ${({ theme }) => theme.colors.primary};
-  height: 40px;
-  width: 40px;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
   display: flex;
   align-items: center;
 	justify-content: center;
+    cursor: pointer;
+   @media (max-width: 400px) {
+    height: 40px;
+      width: 40px;
+    }
 `
 
 const HamburgerInner = styled.div`
+ position: fixed;
   width: 30px;
   height: 3px;
   position: absolute;
@@ -61,8 +73,10 @@ const HamburgerInner = styled.div`
 `
 
 const HamburgerLink = styled(Link)`
+  margin-top: 20px;
   color: white;
-  transition-duration: 3s;
+  transition-duration: 4s;
+  transition-delay: 0.5s;
   opacity: ${({ showMenu }) => showMenu ? '1' : '0'} ;
   text-decoration: none;
 `;
@@ -83,16 +97,27 @@ const HamburgerMenu = styled.div`
 	justify-content: center;
 `
 
+const StyledLogo = styled.img`
+  margin-right: 10px;
+  height: 35px;
+  width: 35px;
+  transition-duration: 0.5s;
+    :hover {
+     transform: rotate(360deg);
+      transition-duration: 0.5s;
+  }
+`
+
+
 const Header = () => {
   const [menu, showMenu] = useState(false)
 
   return (
     <StyledHeader>
-      <h1>
         <StyledLink to="/">
-          BLOG
+        <StyledLogo src={Logo}/>
+        BLOG
         </StyledLink>
-      </h1>
       <Hamburger onClick={()=> {showMenu(!menu)}}>
         <HamburgerInner showMenu={menu} />
       </Hamburger>

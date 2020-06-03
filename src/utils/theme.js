@@ -4,9 +4,10 @@ export const theme = {
 	colors,
 
 	font: {
-		thin:300,
+		thin:200,
 		regular: 400,
-		bold: 800,
+		bold: 600,
+		black: 800,
 	},
 
 	media : {

@@ -4,7 +4,6 @@ import styled from 'styled-components'
 import Logo from "../../images/logo.png"
 
 const StyledHeader = styled.div`
-  background: ${({ theme }) => theme.colors.primary};
   height: 8vh;
   width: 100%;
   z-index: 99;
@@ -29,7 +28,6 @@ const Hamburger = styled.div`
  position: fixed;
   left:20px;
   z-index: 999;
-  background: ${({ theme }) => theme.colors.primary};
   border-radius: 50px;
   height: 50px;
   width: 50px;

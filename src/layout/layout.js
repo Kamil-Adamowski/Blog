@@ -9,6 +9,7 @@ import Footer from '../components/footer/footer'
 		margin: 0;
 		font-family: 'Montserrat';
 		color: black;
+		background: ${({ theme }) => theme.colors.background};
 	}
 
 	h1 {

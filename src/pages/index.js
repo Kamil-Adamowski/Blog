@@ -4,13 +4,13 @@ import Layout from '../layout/layout'
 import styled from 'styled-components';
 
 const Wrapper = styled.div`
-display: grid;
+  display: grid;
   grid-template-columns: 2fr 2fr;
   grid-template-rows: 2fr 2fr ;
   gap: 25px 25px;
 	padding: 20px 20px;
 	width: 80%;
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
     width: 95%;
     padding: 5px 5px;
   }
@@ -26,16 +26,18 @@ const Post = styled(Link)`
   text-decoration: none;
   width: 100%;
   padding: 12px;
+  border-radius: 10px;
+  transition-duration: 0.5s;
   :hover {
-   background: rgba(242, 79, 19, .5);
-      transition-duration: 0.5s;
+    background: rgba(242, 79, 19, .5);
+    transition-duration: 0.5s;
   }
 `
 
 const Img = styled.img`
   width: 100%;
   height: 350px;
-  @media (max-width: 1000px) {
+  @media (max-width: 1100px) {
    height: 200px;
   }
   @media (max-width: 600px) {

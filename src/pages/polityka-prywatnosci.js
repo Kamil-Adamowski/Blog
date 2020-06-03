@@ -20,7 +20,6 @@ const P = styled.p`
 	line-height: 1.7;
 `
 
-
 const politykaPrywatnosci = () => {
 	return (
 		<Layout>

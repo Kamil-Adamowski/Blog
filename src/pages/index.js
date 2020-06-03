@@ -19,11 +19,17 @@ display: grid;
     width: 100%;
     padding: 10px 10px;
   }
+
 `
 
 const Post = styled(Link)`
   text-decoration: none;
   width: 100%;
+  padding: 12px;
+  :hover {
+   background: rgba(242, 79, 19, .5);
+      transition-duration: 0.5s;
+  }
 `
 
 const Img = styled.img`

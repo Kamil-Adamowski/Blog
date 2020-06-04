@@ -27,16 +27,13 @@ const Post = styled(Link)`
   width: 100%;
   padding: 12px;
   border-radius: 10px;
-  transition-duration: 0.5s;
-  :hover {
-    background: rgba(242, 79, 19, .5);
-    transition-duration: 0.5s;
-  }
+  background: rgba(230, 230, 230, 1);
 `
 
 const Img = styled.img`
   width: 100%;
   height: 350px;
+  border-radius: 5px;
   @media (max-width: 1100px) {
    height: 200px;
   }

@@ -109,9 +109,9 @@ function Footer() {
 					<H3>{site.siteMetadata.title}</H3>
 			</Content>
 			<Icons>
-				<MediaLink href='https://www.google.com'><StyledIcon src={FacebookIcon} alt='FacebookIcon' /></MediaLink>
-				<MediaLink href='https://www.google.com'><StyledIcon src={InstagramIcon} alt='InstagramIcon' /></MediaLink>
-				<MediaLink href='https://www.google.com'><StyledIcon src={YoutubeIcon} alt='FacebookIcon' /></MediaLink>
+				<MediaLink href='/'><StyledIcon src={FacebookIcon} alt='FacebookIcon' /></MediaLink>
+				<MediaLink href='/'><StyledIcon src={InstagramIcon} alt='InstagramIcon' /></MediaLink>
+				<MediaLink href='/'><StyledIcon src={YoutubeIcon} alt='FacebookIcon' /></MediaLink>
 			</Icons>
 			<FooterInfo>
 				<PrivacyLink to='polityka-prywatnosci'>Polityka prywatnosci</PrivacyLink>
